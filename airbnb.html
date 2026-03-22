@@ -8,6 +8,10 @@
     <meta name="keywords" content="Airbnb Morton Grove, O'Hare lodging, Metra station housing, Chicago suburbs Airbnb, Metro on Main">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <meta name="theme-color" content="#0b0f19">
+    <meta name="color-scheme" content="dark">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Google Analytics -->
@@ -18,7 +22,14 @@
         gtag('js', new Date());
         gtag('config', 'G-EG8QR8G4DD');
     </script>
-    
+
+    <meta property="og:title" content="Luxury Airbnb Stays | Saint Core Holdings">
+    <meta property="og:description" content="Luxury Airbnb stays near O'Hare in Morton Grove, Chicago. Book your comfortable stay.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.saintcoreholdings.com/airbnb">
+    <meta property="og:image" content="https://www.saintcoreholdings.com/web-app-manifest-512x512.png">
+    <link rel="canonical" href="https://www.saintcoreholdings.com/airbnb">
+
     <style>
         :root {
             --bg-dark: #0b0f19;
@@ -1145,9 +1156,27 @@
                 justify-content: center;
             }
         }
+
+        .skip-link {
+          position: absolute; top: -100%; left: 50%; transform: translateX(-50%);
+          background: var(--gold); color: var(--bg-dark); padding: 12px 24px;
+          font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; z-index: 9999;
+          transition: top 0.2s ease;
+        }
+        .skip-link:focus { top: 10px; }
+        *:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
     <nav class="nav-frame">
         <a href="index.html">← Back to Hub</a>
@@ -1156,7 +1185,7 @@
     </nav>
 
     <!-- Hero Section with Pricing -->
-    <section class="hero-airbnb">
+    <section class="hero-airbnb" id="main-content">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Modern Private Room</h1>
@@ -1560,7 +1589,7 @@
             <div class="final-cta">
                 <h2>Ready to Book Your Stay?</h2>
                 <p>Experience modern comfort in Metro on Main</p>
-                <a href="https://airbnb.com/h/saintstays" target="_blank" class="btn-gold">View Availability & Book Now</a>
+                <a href="https://airbnb.com/h/saintstays" target="_blank" rel="noopener noreferrer" class="btn-gold">View Availability & Book Now</a>
             </div>
         </div>
 
@@ -1588,7 +1617,7 @@
                     <span>1 guest</span>
                 </div>
 
-                <a href="https://airbnb.com/h/saintstays" target="_blank" class="btn-book">Check Availability</a>
+                <a href="https://airbnb.com/h/saintstays" target="_blank" rel="noopener noreferrer" class="btn-book">Check Availability</a>
 
                 <p class="booking-note">You won't be charged yet</p>
 
@@ -1634,8 +1663,8 @@
     <footer>
         <div class="footer-inner">
             <div class="socials">
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="faq.html">FAQ</a>
                 <a href="terms.html">Terms</a>
                 <a href="privacy.html">Privacy</a>
