@@ -23,6 +23,11 @@
         gtag('config', 'G-MWCYMXSX8H');
     </script>
     <link rel="canonical" href="https://www.saintcoreholdings.com/privacy">
+    <meta property="og:title" content="Privacy Policy | Saint Core Holdings">
+    <meta property="og:description" content="Privacy policy for Saint Core Holdings LLC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.saintcoreholdings.com/privacy">
+    <meta property="og:image" content="https://www.saintcoreholdings.com/images/og-image.png">
 
     <style>
         :root {
@@ -190,9 +195,18 @@
                 justify-content: center;
             }
         }
+
+        /* Accessibility */
+        .skip-link { position:absolute; top:-100%; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--bg-dark); padding:12px 24px; font-size:0.8rem; font-weight:600; letter-spacing:1px; z-index:9999; transition:top 0.2s ease; }
+        .skip-link:focus { top:10px; }
+        *:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+        @media (prefers-reduced-motion:reduce) {
+          *,*::before,*::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <nav class="nav-frame">
         <div class="nav-group">
@@ -213,7 +227,7 @@
       </nav>
     </header>
 
-    <div class="page-container">
+    <div class="page-container" id="main-content">
         <h1 class="page-title">Privacy Policy</h1>
         <p class="page-subtitle">Last Updated: January 2026</p>
 
@@ -281,8 +295,8 @@
     <footer>
         <div class="footer-content">
             <div class="socials">
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/saintcoreholdings" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/company/saintcoreholdings" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a href="faq.html">FAQ</a>
                 <a href="terms.html">Terms</a>
                 <a href="privacy.html">Privacy</a>
