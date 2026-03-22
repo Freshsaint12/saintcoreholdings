@@ -92,6 +92,19 @@
             color: var(--gold);
         }
 
+        .nav-group {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
         /* Hero Section */
         .hero-airbnb {
             position: relative;
@@ -1067,16 +1080,23 @@
                 flex-direction: column;
                 gap: 15px;
             }
-            
-            .nav-frame > a:first-child {
+
+            .nav-logo {
+                order: 1;
+                font-size: 1.2rem !important;
+            }
+
+            .nav-group {
+                gap: 20px;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav-group:first-child {
                 order: 2;
             }
-            
-            .nav-frame > div {
-                order: 1;
-            }
-            
-            .nav-frame > a:last-child {
+
+            .nav-group:last-child {
                 order: 3;
             }
 
@@ -1203,14 +1223,25 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="nav-frame">
-        <a href="index.html">← Back to Hub</a>
-        <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-          <img src="images/logo-128.png" alt="Saint Core Holdings Logo" width="40" height="40" style="border-radius:4px;">
-          <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--gold);">SAINT CORE HOLDINGS</div>
-        </a>
-        <a href="contact.html">Concierge</a>
-    </nav>
+    <header>
+      <nav class="nav-frame">
+        <div class="nav-group">
+          <a href="about.html">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="brand">
+          <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+            <img src="images/logo-128.png" alt="Saint Core Holdings Logo" width="40" height="40" style="border-radius:4px;">
+            <div class="nav-logo">SAINT CORE HOLDINGS</div>
+          </a>
+        </div>
+        <div class="nav-group" style="justify-content:flex-end;">
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
 
     <!-- Hero Section with Pricing -->
     <section class="hero-airbnb" id="main-content">
