@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | SAINT CORE HOLDINGS</title>
+<meta name="description" content="Insights on photography, hospitality, property services, and technology ventures from Saint Core Holdings in Chicago.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0b0f19">
+<meta name="color-scheme" content="dark">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Blog | Saint Core Holdings">
+<meta property="og:description" content="Insights on photography, hospitality, property services, and technology ventures.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.saintcoreholdings.com/blog">
+<meta property="og:image" content="https://www.saintcoreholdings.com/images/og-image.png">
+<link rel="canonical" href="https://www.saintcoreholdings.com/blog">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EG8QR8G4DD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EG8QR8G4DD');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0b0f19;
+  --border: rgba(255,255,255,0.08);
+  --gold: #d4af37;
+  --text-dim: rgba(255,255,255,0.6);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Montserrat',sans-serif; background:var(--bg-dark); color:white; overflow-x:hidden; }
+a { color:inherit; text-decoration:none; }
+
+/* Nav */
+header { border-bottom:1px solid var(--border); }
+.nav-frame { display:flex; justify-content:space-between; align-items:center; padding:30px 60px; }
+.nav-group { display:flex; gap:30px; width:200px; }
+.nav-group a { font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--text-dim); transition:color 0.3s ease; }
+.nav-group a:hover { color:var(--gold); }
+.brand { text-align:center; }
+.brand-title { font-family:'Cormorant Garamond'; font-size:1.5rem; color:var(--gold); letter-spacing:1px; }
+
+/* Hero */
+.blog-hero {
+  padding: 100px 60px 80px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.blog-hero h1 {
+  font-family: 'Cormorant Garamond';
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.blog-hero p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Coming Soon */
+.blog-content {
+  padding: 100px 60px;
+  text-align: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coming-soon-icon {
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+.blog-content h2 {
+  font-family: 'Cormorant Garamond';
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.blog-content p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+.blog-topics {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.topic-tag {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+.topic-tag:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Footer */
+footer { background:radial-gradient(circle at bottom,#1a202c 0%,#0b0f19 100%); border-top:1px solid rgba(212,175,55,0.2); padding:80px 60px; position:relative; }
+footer::before { content:""; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"); opacity:0.3; pointer-events:none; }
+.footer-inner { position:relative; z-index:2; display:flex; justify-content:space-between; align-items:center; }
+.footer-inner a, .socials a { font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--text-dim); margin-right:20px; transition:color 0.3s ease; }
+.footer-inner a:hover, .socials a:hover { color:var(--gold); }
+.copyright { color:var(--gold); font-size:0.7rem; letter-spacing:2px; }
+
+/* Accessibility */
+.skip-link { position:absolute; top:-100%; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--bg-dark); padding:12px 24px; font-size:0.8rem; font-weight:600; z-index:9999; transition:top 0.2s ease; }
+.skip-link:focus { top:10px; }
+*:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; }
+}
+
+/* Mobile */
+@media (max-width:768px) {
+  .nav-frame { padding:20px; flex-direction:column; gap:20px; }
+  .brand { order:1; width:100%; }
+  .nav-group { width:100%; justify-content:center; }
+  .nav-group:first-child { order:2; }
+  .nav-group:last-child { display:none; }
+  .blog-hero { padding:60px 20px; }
+  .blog-hero h1 { font-size:2.5rem; }
+  .blog-content { padding:60px 20px; }
+  .blog-content h2 { font-size:2rem; }
+  footer { padding:40px 20px; }
+  .footer-inner { flex-direction:column; gap:20px; text-align:center; }
+}
+</style>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+  <nav class="nav-frame">
+    <div class="nav-group">
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="brand">
+      <a href="/" style="display:flex; align-items:center; gap:12px; text-decoration:none;">
+        <img src="images/logo-128.png" alt="Saint Core Holdings Logo" width="40" height="40" style="border-radius:4px;">
+        <div class="brand-title">SAINT CORE HOLDINGS</div>
+      </a>
+    </div>
+    <div class="nav-group" style="justify-content:flex-end;">
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main-content">
+  <section class="blog-hero">
+    <h1>Blog</h1>
+    <p>Insights, guides, and behind-the-scenes from our service businesses and technology ventures.</p>
+  </section>
+
+  <section class="blog-content">
+    <div class="coming-soon-icon">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+        <path d="M2 2l7.586 7.586"/>
+        <circle cx="11" cy="11" r="2"/>
+      </svg>
+    </div>
+    <h2>Coming Soon</h2>
+    <p>We're putting together content worth reading. No filler, no fluff — just real insights from running service businesses and building technology platforms.</p>
+    <a href="contact.html" class="btn-primary" style="padding:15px 40px; background:var(--gold); color:var(--bg-dark); font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; font-weight:600; display:inline-block; transition:transform 0.3s ease, box-shadow 0.3s ease;">Get Notified</a>
+    <div class="blog-topics">
+      <span class="topic-tag">Photography Tips</span>
+      <span class="topic-tag">Airbnb Hosting</span>
+      <span class="topic-tag">Property Management</span>
+      <span class="topic-tag">Tech Ventures</span>
+      <span class="topic-tag">Chicago Business</span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="socials">
+      <a href="https://www.instagram.com/saintcoreholdings" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.linkedin.com/company/saintcoreholdings" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="copyright">&copy; 2026 SAINT CORE HOLDINGS LLC</div>
+  </div>
+</footer>
+
+</body>
+</html>

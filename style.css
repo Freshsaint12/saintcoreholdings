@@ -1,4 +1,355 @@
 /* =========================================
+   SHARED STYLES — SAINT CORE HOLDINGS
+   Common styles used across all pages
+========================================= */
+
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  --bg-dark: #0b0f19;
+  --bg-darker: #05080f;
+  --border: rgba(255,255,255,0.08);
+  --gold: #d4af37;
+  --text-dim: rgba(255,255,255,0.6);
+  --white: #ffffff;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ===== GLOBAL RESETS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-dark);
+  color: var(--white);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== HEADER / NAVIGATION ===== */
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-frame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.nav-group {
+  display: flex;
+  gap: 30px;
+  width: 200px;
+}
+
+.nav-group a {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-group a:hover {
+  color: var(--gold);
+  transform: scale(1.1);
+  text-shadow: 0 0 10px var(--gold);
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand-title {
+  font-family: 'Cormorant Garamond';
+  font-size: 1.5rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-primary {
+  padding: 15px 40px;
+  background: var(--gold);
+  color: var(--bg-dark);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(212,175,55,0.4);
+}
+
+.btn-secondary {
+  padding: 15px 40px;
+  background: transparent;
+  color: var(--white);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ===== SECTION HEADER ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-family: 'Cormorant Garamond';
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.section-header p {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: radial-gradient(circle at bottom, #1a202c 0%, #0b0f19 100%);
+  border-top: 1px solid rgba(212,175,55,0.2);
+  padding: 80px 60px;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* --- Footer Grid --- */
+.footer-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer-brand h3 {
+  font-family: 'Cormorant Garamond';
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  max-width: 300px;
+}
+
+.footer-col h4 {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 25px;
+}
+
+.footer-col a {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--gold);
+  transform: scale(1.05);
+  text-shadow: 0 0 10px var(--gold);
+}
+
+.footer-col p {
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+/* --- Footer Inner (bottom bar) --- */
+.footer-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-inner a,
+.socials a {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-right: 20px;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-inner a:hover,
+.socials a:hover {
+  transform: scale(1.1);
+  color: var(--gold);
+  text-shadow: 0 0 10px var(--gold);
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
+
+.copyright {
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--bg-dark);
+  padding: 12px 24px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== MOBILE RESPONSIVE — SHARED COMPONENTS ===== */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-frame {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-group {
+    width: 100%;
+    justify-content: center;
+    gap: 25px;
+    font-size: 0.65rem;
+  }
+
+  .nav-group:first-child {
+    order: 2;
+  }
+
+  .nav-group:last-child {
+    order: 3;
+  }
+
+  .brand {
+    width: 100%;
+    order: 1;
+  }
+
+  .brand-title {
+    font-size: 1.2rem;
+  }
+
+  /* Buttons */
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 30px;
+  }
+
+  /* Section Header */
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .socials {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .socials a {
+    margin: 0;
+  }
+}
+
+
+/* =========================================
    PHOTOGRAPHY / SERVICES GRID (MATCHES HANDYMAN)
 ========================================= */
 
