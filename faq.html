@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | SAINT CORE HOLDINGS</title>
+    <meta name="description" content="Frequently asked questions about SAINT CORE HOLDINGS services - photography, Airbnb, and handyman services">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EG8QR8G4DD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EG8QR8G4DD');
+    </script>
+    
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --bg-darker: #05080f;
+            --border: rgba(255,255,255,0.08);
+            --gold: #d4af37;
+            --text-dim: rgba(255,255,255,0.6);
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg-dark);
+            color: var(--white);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .nav-frame {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(11, 15, 25, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-frame a {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-frame a:hover {
+            color: var(--gold);
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant Garamond';
+            font-size: 1.3rem;
+            color: var(--gold);
+        }
+
+        /* Hero Section */
+        .faq-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding: 150px 20px 80px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(11, 15, 25, 0.9));
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond';
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 20px 60px 20px 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            color: white;
+            font-family: 'Montserrat';
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar:focus {
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-bar::placeholder {
+            color: var(--text-dim);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            color: var(--gold);
+        }
+
+        /* Popular Questions */
+        .popular-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 60px;
+        }
+
+        .section-label {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond';
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 50px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .popular-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .popular-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .popular-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .popular-item h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .popular-item p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ Categories */
+        .faq-container {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 0 60px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 80px 0 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+        }
+
+        .category-title {
+            font-family: 'Cormorant Garamond';
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .category-count {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            margin-left: auto;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* FAQ Items */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .faq-item:hover {
+            border-color: var(--gold);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--gold);
+        }
+
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 30px 25px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            color: var(--gold);
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Contact Support Section */
+        .support-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(11, 15, 25, 0.9));
+            border: 1px solid var(--gold);
+            padding: 80px 60px;
+            text-align: center;
+            margin: 100px 60px;
+        }
+
+        .support-title {
+            font-family: 'Cormorant Garamond';
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .support-text {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .support-method {
+            text-align: center;
+        }
+
+        .support-method-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .support-method h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .support-method p {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .support-method a {
+            color: var(--gold);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .support-method a:hover {
+            color: white;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            padding: 18px 50px;
+            background: transparent;
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold);
+            color: var(--bg-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-darker);
+            border-top: 1px solid var(--border);
+            padding: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .socials {
+            display: flex;
+            gap: 30px;
+        }
+
+        .socials a {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .socials a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            font-size: 0.7rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-frame {
+                padding: 15px 20px;
+            }
+
+            .faq-hero {
+                padding: 120px 20px 60px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .popular-section,
+            .faq-container {
+                padding: 0 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .popular-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                flex-wrap: wrap;
+                margin: 60px 0 20px;
+            }
+
+            .category-count {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .support-section {
+                padding: 60px 30px;
+                margin: 60px 20px;
+            }
+
+            .support-title {
+                font-size: 2rem;
+            }
+
+            .support-methods {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .socials {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-frame">
+        <a href="index.html">← Return Home</a>
+        <div class="nav-logo">SAINT CORE HOLDINGS</div>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Hero with Search -->
+    <section class="faq-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Frequently Asked<br>Questions</h1>
+            <p class="hero-subtitle">Find answers to common questions about our services</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-bar" id="searchInput" placeholder="Search for answers..." onkeyup="searchFAQ()">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Questions -->
+    <section class="popular-section">
+        <p class="section-label">Most Asked</p>
+        <h2 class="section-title">Popular Questions</h2>
+        
+        <div class="popular-grid">
+            <a href="#general" class="popular-item" onclick="openFAQ('faq-1')">
+                <h4>What services do you offer?</h4>
+                <p>Learn about our three main divisions: Photography, Airbnb, and Handyman services.</p>
+            </a>
+
+            <a href="#photography" class="popular-item" onclick="openFAQ('faq-5')">
+                <h4>How much does studio rental cost?</h4>
+                <p>Our 2,500 sq ft studio starts at $100/hour with professional equipment included.</p>
+            </a>
+
+            <a href="#airbnb" class="popular-item" onclick="openFAQ('faq-8')">
+                <h4>How far is your Airbnb from O'Hare?</h4>
+                <p>Just 20 minutes by car, perfect for airport travelers and stopovers.</p>
+            </a>
+
+            <a href="#handyman" class="popular-item" onclick="openFAQ('faq-13')">
+                <h4>Are you licensed and insured?</h4>
+                <p>Yes, fully licensed with up to $1 million in liability insurance coverage.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Container -->
+    <div class="faq-container">
+        
+        <!-- GENERAL QUESTIONS -->
+        <div class="category-header" id="general">
+            <span class="category-icon">💼</span>
+            <h2 class="category-title">General</h2>
+            <span class="category-count">3 Questions</span>
+        </div>
+        
+        <div class="faq-item" id="faq-1">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What services does SAINT CORE HOLDINGS offer?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                We offer three main service divisions: Professional Photography & Studio Rental, Luxury Airbnb Stays, and Premium Handyman Services. Each division maintains the highest standards of quality and professionalism.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-2">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What areas do you serve?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                We're headquartered in Chicago with primary operations in Morton Grove and surrounding suburbs. Handyman services cover the greater Chicago area. Our Airbnb property is located in Metro on Main, Morton Grove.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-3">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How do I get a quote?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Contact us through our contact form, email (hello@saintcoreholdings.com), or call +1 (872) 777-7503. We typically respond within 24 hours with a detailed quote.
+            </div>
+        </div>
+
+        <!-- PHOTOGRAPHY QUESTIONS -->
+        <div class="category-header" id="photography">
+            <span class="category-icon">📸</span>
+            <h2 class="category-title">Photography & Studio</h2>
+            <span class="category-count">4 Questions</span>
+        </div>
+
+        <div class="faq-item" id="faq-4">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What equipment is included with studio rental?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Our 2,500 sq ft studio features 18 ft ceilings, a full cyclorama wall, Profoto and Arri lighting equipment, and ample space for creative productions. Additional equipment can be arranged upon request.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-5">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do you offer photography services or just studio rental?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                We offer both! You can rent the studio for your own shoots ($100/hr) or book our professional photography services for portraits, events, headshots, and full-day productions.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-6">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What's your cancellation policy for studio bookings?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Cancellations 48+ hours before your booking receive a full refund. 24-48 hours: 50% refund. Less than 24 hours: no refund.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-7">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How far in advance should I book a photo session?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                For standard sessions, we recommend booking at least 1-2 weeks in advance. For weddings and large events, booking 2-3 months ahead ensures availability. However, we often accommodate last-minute bookings when possible.
+            </div>
+        </div>
+
+        <!-- AIRBNB QUESTIONS -->
+        <div class="category-header" id="airbnb">
+            <span class="category-icon">🏠</span>
+            <h2 class="category-title">Airbnb Stays</h2>
+            <span class="category-count">5 Questions</span>
+        </div>
+
+        <div class="faq-item" id="faq-8">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Where is your Airbnb property located?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Our modern townhouse is located in Metro on Main, Morton Grove, IL. It's a 5-minute walk to the Morton Grove Metra station and approximately 20 minutes from O'Hare Airport.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-9">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How many guests can the property accommodate?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                The private room sleeps up to 2 guests comfortably. It's perfect for solo travelers, couples, or business professionals.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-10">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What amenities are included?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Fast Wi-Fi, comfortable bed with fresh linens, heating & A/C, keyless entry, shared common areas, and access to a newly built modern home with 800 thread count bedding.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-11">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is parking available?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes! Free parking is available right in front of the townhouse. There's always plenty of street parking in the Metro on Main community.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-12">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What's the check-in process?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Check-in is after 3:00 PM and check-out is before 11:00 AM. We use keyless entry for your convenience - you'll receive a code before arrival. Early check-in and late check-out may be available upon request.
+            </div>
+        </div>
+
+        <!-- HANDYMAN QUESTIONS -->
+        <div class="category-header" id="handyman">
+            <span class="category-icon">🔧</span>
+            <h2 class="category-title">Handyman Services</h2>
+            <span class="category-count">5 Questions</span>
+        </div>
+
+        <div class="faq-item" id="faq-13">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What types of handyman services do you provide?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                We offer curtain/blind installation, furniture assembly, smart home installation, TV mounting, electrical fixture replacement, and general home maintenance. Rates range from $65-$90/hr.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-14">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do you offer flat rates or hourly rates?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                We offer both! Most services have an hourly rate and a flat-rate option depending on the scope of work. TV mounting, for example, is flat-rate only ($120-$250).
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-15">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Are you licensed and insured?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes, SAINT CORE HOLDINGS maintains appropriate licensing and insurance coverage for all handyman services to protect both our clients and our team.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-16">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What's your cancellation policy for handyman services?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Cancellations 24+ hours before your appointment have no fee. Same-day cancellations may incur a $50 cancellation fee.
+            </div>
+        </div>
+
+        <div class="faq-item" id="faq-17">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do you offer same-day service?</span>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                Yes, same-day service is often available depending on our schedule and your location. Call us in the morning for the best chance at same-day availability: +1 (872) 777-7503.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact Support Section -->
+    <section class="support-section">
+        <h2 class="support-title">Still Have Questions?</h2>
+        <p class="support-text">We're here to help. Our team typically responds within 24 hours.</p>
+        
+        <div class="support-methods">
+            <div class="support-method">
+                <div class="support-method-icon">📧</div>
+                <h4>Email Us</h4>
+                <p><a href="mailto:hello@saintcoreholdings.com">hello@saintcoreholdings.com</a></p>
+            </div>
+
+            <div class="support-method">
+                <div class="support-method-icon">📞</div>
+                <h4>Call Us</h4>
+                <p><a href="tel:+18727777503">+1 (872) 777-7503</a></p>
+            </div>
+
+            <div class="support-method">
+                <div class="support-method-icon">💬</div>
+                <h4>Contact Form</h4>
+                <p>Fill out our form for detailed inquiries</p>
+            </div>
+        </div>
+
+        <a href="contact.html" class="btn-gold">Get In Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="faq.html">FAQ</a>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="copyright">© 2026 SAINT CORE HOLDINGS LLC</div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle FAQ answer
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't already open
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Open specific FAQ from popular questions
+        function openFAQ(faqId) {
+            event.preventDefault();
+            const faqItem = document.getElementById(faqId);
+            if (faqItem) {
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                // Open specific
+                faqItem.classList.add('active');
+                // Scroll to it
+                setTimeout(() => {
+                    faqItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }
+        }
+
+        // Search FAQ
+        function searchFAQ() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(filter) || answer.includes(filter)) {
+                    item.style.display = '';
+                    if (filter.length > 2) {
+                        item.classList.add('active');
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Hide category headers if no items visible
+            document.querySelectorAll('.category-header').forEach(header => {
+                const nextItems = [];
+                let sibling = header.nextElementSibling;
+                while (sibling && !sibling.classList.contains('category-header')) {
+                    if (sibling.classList.contains('faq-item')) {
+                        nextItems.push(sibling);
+                    }
+                    sibling = sibling.nextElementSibling;
+                }
+                
+                const anyVisible = nextItems.some(item => item.style.display !== 'none');
+                header.style.display = anyVisible ? '' : 'none';
+            });
+
+            // Show all if search is cleared
+            if (filter === '') {
+                document.querySelectorAll('.category-header').forEach(header => {
+                    header.style.display = '';
+                });
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        }
+    </script>
+
+</body>
+</html>
