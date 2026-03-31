@@ -1,2 +1,10 @@
-# Cloudflare Pages handles clean URLs automatically
+# Redirect old pages to homepage
 /home / 301
+/photography / 301
+/airbnb / 301
+/handyman / 301
+/about / 301
+/contact / 301
+/blog / 301
+/blog/* / 301
+/faq / 301

@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | SAINT CORE HOLDINGS</title>
+    <title>Terms of Service — Saint Core Holdings</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta name="theme-color" content="#0b0f19">
+    <meta name="theme-color" content="#0A0A0A">
     <meta name="color-scheme" content="dark">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://www.saintcoreholdings.com/terms">
+    <meta name="description" content="Terms of service for Saint Core Holdings LLC.">
+    <meta property="og:title" content="Terms of Service — Saint Core Holdings">
+    <meta property="og:description" content="Terms of service for Saint Core Holdings LLC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.saintcoreholdings.com/terms">
+    <meta property="og:image" content="https://www.saintcoreholdings.com/images/og-image.png">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWCYMXSX8H"></script>
@@ -22,300 +27,131 @@
         gtag('js', new Date());
         gtag('config', 'G-MWCYMXSX8H');
     </script>
-    <link rel="canonical" href="https://www.saintcoreholdings.com/terms">
-    <meta property="og:title" content="Terms of Service | Saint Core Holdings">
-    <meta property="og:description" content="Terms of service for Saint Core Holdings LLC services.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.saintcoreholdings.com/terms">
-    <meta property="og:image" content="https://www.saintcoreholdings.com/images/og-image.png">
 
     <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --bg-dark: #0b0f19;
-            --bg-darker: #05080f;
-            --border: rgba(255,255,255,0.08);
-            --gold: #d4af37;
-            --text-dim: rgba(255,255,255,0.6);
+            --bg: #0A0A0A; --bg-card: #18181B; --border: #27272A;
+            --text: #FAFAFA; --text-secondary: #A1A1AA; --text-muted: #71717A; --accent: #3B82F6;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { color: inherit; text-decoration: none; }
+        .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: var(--accent); color: #fff; padding: 10px 20px; font-size: 0.85rem; font-weight: 600; z-index: 9999; border-radius: 8px; transition: top 0.2s; }
+        .skip-link:focus { top: 12px; }
+        *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 16px 40px; background: rgba(10,10,10,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); }
+        .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.95rem; }
+        .nav-links { display: flex; gap: 32px; }
+        .nav-links a { font-size: 0.85rem; color: var(--text-secondary); transition: color 0.2s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-toggle { display: none; background: none; border: none; color: var(--text-secondary); cursor: pointer; padding: 4px; }
+        @media (max-width: 640px) {
+            nav { padding: 14px 20px; }
+            .nav-links { display: none; }
+            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,10,10,0.97); border-bottom: 1px solid var(--border); padding: 16px 20px; gap: 16px; }
+            .nav-toggle { display: block; }
         }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--bg-dark);
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
+        .page { max-width: 720px; margin: 120px auto 80px; padding: 0 40px; }
+        @media (max-width: 640px) { .page { padding: 0 20px; margin: 100px auto 60px; } }
+        .page h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 8px; }
+        @media (max-width: 640px) { .page h1 { font-size: 1.6rem; } }
+        .page-date { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 48px; }
+        .page h2 { font-size: 1.15rem; font-weight: 600; margin: 40px 0 12px; }
+        .page p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 12px; }
+        .page ul { color: var(--text-secondary); line-height: 2; margin-left: 24px; margin-bottom: 12px; }
+        .page strong { color: var(--text); }
 
-        .nav-frame {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 60px;
-            background: rgba(11, 15, 25, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-        }
-
-        .nav-frame a {
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            transition: color 0.3s ease;
-            text-decoration: none;
-        }
-
-        .nav-frame a:hover {
-            color: var(--gold);
-        }
-
-        .nav-logo {
-            font-family: 'Cormorant Garamond';
-            font-size: 1.3rem;
-            color: var(--gold);
-        }
-
-        .page-container {
-            max-width: 900px;
-            margin: 120px auto 100px;
-            padding: 0 60px;
-        }
-
-        .page-title {
-            font-family: 'Cormorant Garamond';
-            font-size: 4rem;
-            color: white;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 700;
-            line-height: 1.1;
-        }
-
-        .page-subtitle {
-            text-align: center;
-            color: var(--text-dim);
-            margin-bottom: 60px;
-            font-size: 0.9rem;
-        }
-
-        .section {
-            margin-bottom: 50px;
-        }
-
-        .section-title {
-            font-family: 'Cormorant Garamond';
-            font-size: 2rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .section p {
-            color: white;
-            line-height: 1.9;
-            margin-bottom: 15px;
-        }
-
-        .section ul {
-            color: var(--text-dim);
-            line-height: 2;
-            margin-left: 25px;
-            margin-top: 15px;
-        }
-
-        .section strong {
-            color: white;
-        }
-
-        footer {
-            background: var(--bg-darker);
-            border-top: 1px solid var(--border);
-            padding: 60px;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .socials {
-            display: flex;
-            gap: 30px;
-        }
-
-        .socials a {
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-dim);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .socials a:hover {
-            color: var(--gold);
-        }
-
-        .copyright {
-            font-size: 0.7rem;
-            color: var(--gold);
-            letter-spacing: 2px;
-        }
-
-        @media (max-width: 768px) {
-            .nav-frame {
-                padding: 15px 20px;
-            }
-
-            .page-container {
-                padding: 0 20px;
-                margin: 100px auto 80px;
-            }
-
-            .page-title {
-                font-size: 2.5rem;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-                text-align: center;
-            }
-
-            .socials {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-
-        /* Accessibility */
-        .skip-link { position:absolute; top:-100%; left:50%; transform:translateX(-50%); background:var(--gold); color:var(--bg-dark); padding:12px 24px; font-size:0.8rem; font-weight:600; letter-spacing:1px; z-index:9999; transition:top 0.2s ease; }
-        .skip-link:focus { top:10px; }
-        *:focus-visible { outline:2px solid var(--gold); outline-offset:3px; }
-        @media (prefers-reduced-motion:reduce) {
-          *,*::before,*::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
-        }
+        footer { border-top: 1px solid var(--border); padding: 32px 40px; }
+        .footer-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { font-size: 0.8rem; color: var(--text-muted); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--text-secondary); }
+        @media (max-width: 640px) { footer { padding: 24px 20px; } .footer-inner { flex-direction: column; text-align: center; } }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-      <nav class="nav-frame">
-        <div class="nav-group">
-          <a href="about.html">About</a>
-          <a href="index.html#services">Services</a>
-          <a href="blog.html">Blog</a>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <nav>
+        <a href="/" class="nav-brand">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="1" y="1" width="26" height="26" rx="6" stroke="#3B82F6" stroke-width="1.5" fill="none"/><path d="M14 5L14 23M8 8L14 5L20 8M8 20L14 23L20 20M8 8V20M20 8V20" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Saint Core Holdings
+        </a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="nav-links">
+            <a href="/#products">Portfolio</a>
+            <a href="/#about">About</a>
+            <a href="/#contact">Contact</a>
         </div>
-        <div class="brand">
-          <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-            <img src="images/logo-128.png" alt="Saint Core Holdings Logo" width="40" height="40" style="border-radius:4px;">
-            <div class="nav-logo">SAINT CORE HOLDINGS</div>
-          </a>
-        </div>
-        <div class="nav-group" style="justify-content:flex-end;">
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
+    </nav>
 
-    <div class="page-container" id="main-content">
-        <h1 class="page-title">Terms of Service</h1>
-        <p class="page-subtitle">Last Updated: January 2026</p>
+    <main id="main">
+        <div class="page">
+            <h1>Terms of Service</h1>
+            <p class="page-date">Last updated: March 2026</p>
 
-        <section class="section">
-            <h2 class="section-title">1. Acceptance of Terms</h2>
-            <p>By accessing and using SAINT CORE HOLDINGS services, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
-        </section>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using Saint Core Holdings LLC services and software platforms, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
 
-        <section class="section">
-            <h2 class="section-title">2. Services Offered</h2>
-            <p>SAINT CORE HOLDINGS provides:</p>
+            <h2>2. Services</h2>
+            <p>Saint Core Holdings LLC develops and operates cloud-based software platforms, including but not limited to:</p>
             <ul>
-                <li>Professional photography and studio rental services</li>
-                <li>Short-term property rentals (Airbnb)</li>
-                <li>Handyman and property maintenance services</li>
+                <li>SaintCoreTax — practice management for tax and financial services firms</li>
+                <li>StudyNovia — adaptive learning platform for nursing students</li>
+                <li>Other software products developed by our company</li>
             </ul>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">3. Booking & Payment</h2>
-            <p>All bookings are subject to availability. Payment terms:</p>
+            <h2>3. Accounts &amp; Subscriptions</h2>
+            <p>Access to our software platforms may require account registration. You agree to:</p>
             <ul>
-                <li>Payment is required at time of booking or service completion</li>
-                <li>We accept major credit cards and electronic payments</li>
-                <li>Quotes are valid for 30 days unless otherwise stated</li>
+                <li>Provide accurate and complete registration information</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Accept responsibility for all activity under your account</li>
             </ul>
-        </section>
+            <p>Subscription terms, pricing, and billing details are provided within each individual platform.</p>
 
-        <section class="section">
-            <h2 class="section-title">4. Cancellation Policy</h2>
-            <p><strong>Photography/Studio Rental:</strong></p>
+            <h2>4. Acceptable Use</h2>
+            <p>You agree not to:</p>
             <ul>
-                <li>Cancellations 48+ hours before: Full refund</li>
-                <li>Cancellations 24-48 hours: 50% refund</li>
-                <li>Cancellations less than 24 hours: No refund</li>
+                <li>Use our platforms for any unlawful purpose</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Reverse engineer, decompile, or disassemble our software</li>
+                <li>Transmit malicious code or interfere with platform operations</li>
+                <li>Resell or redistribute access without authorization</li>
             </ul>
-            <p style="margin-top: 20px;"><strong>Handyman Services:</strong></p>
-            <ul>
-                <li>Cancellations 24+ hours before: No fee</li>
-                <li>Same-day cancellations: $50 fee may apply</li>
-            </ul>
-            <p style="margin-top: 20px;"><strong>Airbnb Stays:</strong></p>
-            <p style="margin-top: 10px;">Subject to Airbnb's cancellation policy as stated in your booking.</p>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">5. Liability</h2>
-            <p>SAINT CORE HOLDINGS maintains appropriate insurance. We are not liable for indirect or consequential damages. Our liability is limited to the amount paid for services.</p>
-        </section>
+            <h2>5. Intellectual Property</h2>
+            <p>All software, content, designs, and branding are the property of Saint Core Holdings LLC. Unauthorized reproduction, distribution, or modification is prohibited.</p>
 
-        <section class="section">
-            <h2 class="section-title">6. User Conduct</h2>
-            <p>Clients agree to:</p>
-            <ul>
-                <li>Provide accurate information</li>
-                <li>Treat properties and staff with respect</li>
-                <li>Comply with all house rules and regulations</li>
-                <li>Not engage in illegal activities</li>
-            </ul>
-        </section>
+            <h2>6. Data &amp; Privacy</h2>
+            <p>Your use of our platforms is also governed by our <a href="/privacy" style="color: var(--accent);">Privacy Policy</a>. We take data security seriously and implement industry-standard protections.</p>
 
-        <section class="section">
-            <h2 class="section-title">7. Intellectual Property</h2>
-            <p>All content on this website is property of SAINT CORE HOLDINGS LLC. Unauthorized use is prohibited.</p>
-        </section>
+            <h2>7. Limitation of Liability</h2>
+            <p>Saint Core Holdings LLC provides software platforms on an "as is" basis. We are not liable for indirect, incidental, or consequential damages arising from use of our services. Our total liability is limited to the fees paid for the applicable service.</p>
 
-        <section class="section">
-            <h2 class="section-title">8. Modifications</h2>
-            <p>We reserve the right to modify these terms at any time. Continued use constitutes acceptance of updated terms.</p>
-        </section>
+            <h2>8. Modifications</h2>
+            <p>We reserve the right to modify these terms at any time. Continued use of our platforms constitutes acceptance of updated terms. We will notify users of material changes via email or in-platform notification.</p>
 
-        <section class="section">
-            <h2 class="section-title">9. Contact</h2>
+            <h2>9. Governing Law</h2>
+            <p>These terms are governed by the laws of the State of Illinois. Any disputes shall be resolved in the courts of Cook County, Illinois.</p>
+
+            <h2>10. Contact</h2>
             <p>Questions about these terms? Contact us:</p>
-            <p style="margin-top: 10px; color: var(--gold);">hello@saintcoreholdings.com<br>+1 (872) 777-7503</p>
-        </section>
-    </div>
+            <p><strong><a href="mailto:hello@saintcoreholdings.com" style="color: var(--accent);">hello@saintcoreholdings.com</a></strong></p>
+        </div>
+    </main>
 
     <footer>
-        <div class="footer-content">
-            <div class="socials">
-                <a href="https://www.instagram.com/saintcoreholdings" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.linkedin.com/company/saintcoreholdings" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="faq.html">FAQ</a>
-                <a href="terms.html">Terms</a>
-                <a href="privacy.html">Privacy</a>
+        <div class="footer-inner">
+            <div class="footer-copy">&copy; 2026 Saint Core Holdings LLC. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
             </div>
-            <div class="copyright">© 2026 SAINT CORE HOLDINGS LLC</div>
         </div>
     </footer>
 </body>
