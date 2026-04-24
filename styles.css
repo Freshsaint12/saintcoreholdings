@@ -392,6 +392,8 @@ main { padding-top: 72px; }
 }
 .card--half { grid-column: 8 / span 5; }
 .card--third { grid-column: span 4; }
+.card--bl { grid-column: 1 / span 6; }
+.card--br { grid-column: 7 / span 6; }
 
 .card-meta {
     display: flex; gap: 12px; align-items: center;
@@ -446,7 +448,7 @@ main { padding-top: 72px; }
 .card-link svg { transition: transform 0.3s var(--ease); }
 
 @media (max-width: 900px) {
-    .card--flagship, .card--half, .card--third {
+    .card--flagship, .card--half, .card--third, .card--bl, .card--br {
         grid-column: 1 / -1;
     }
     .card--flagship {
