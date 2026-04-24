@@ -1,10 +1,11 @@
-# Redirect old pages to homepage
+# Legacy redirects — old Saint Core site paths
 /home / 301
 /photography / 301
 /airbnb / 301
 /handyman / 301
-/about / 301
-/contact / 301
 /blog / 301
 /blog/* / 301
 /faq / 301
+
+# Legacy holding-company paths (new pages exist now)
+/products /portfolio 301

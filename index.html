@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAINT CORE HOLDINGS | Technology Holding Company | Chicago</title>
-    <meta name="description" content="Saint Core Holdings LLC — a Chicago-based technology holding company building software platforms that help professionals work smarter.">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <title>Saint Core Holdings | Technology Holding Company | Chicago</title>
+    <meta name="description" content="Saint Core Holdings is a Chicago technology holding company. We fund, build, and operate a small number of opinionated software platforms — end to end.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <meta name="theme-color" content="#0b0f19">
     <meta name="color-scheme" content="dark">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWCYMXSX8H"></script>
@@ -23,377 +26,307 @@
         gtag('config', 'G-MWCYMXSX8H');
     </script>
 
-    <!-- Open Graph -->
     <meta property="og:title" content="Saint Core Holdings | Technology Holding Company">
-    <meta property="og:description" content="Chicago-based technology holding company building software platforms for professionals.">
+    <meta property="og:description" content="A Chicago technology holding company. We fund, build, and operate opinionated software platforms end to end.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.saintcoreholdings.com">
+    <meta property="og:url" content="https://www.saintcoreholdings.com/">
     <meta property="og:image" content="https://www.saintcoreholdings.com/images/og-image.png">
     <meta property="og:site_name" content="Saint Core Holdings">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Saint Core Holdings | Technology Holding Company">
-    <meta name="twitter:description" content="Chicago-based technology holding company building software platforms for professionals.">
+    <meta name="twitter:description" content="A Chicago technology holding company building opinionated software platforms.">
     <meta name="twitter:image" content="https://www.saintcoreholdings.com/images/og-image.png">
     <link rel="canonical" href="https://www.saintcoreholdings.com/">
 
-    <!-- Schema -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Saint Core Holdings LLC",
-        "description": "Technology holding company building software platforms for professional services",
-        "url": "https://www.saintcoreholdings.com",
-        "logo": "https://www.saintcoreholdings.com/images/logo.png",
-        "telephone": "+1-872-777-7503",
-        "email": "hello@saintcoreholdings.com",
-        "foundingDate": "2024",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Chicago",
-            "addressRegion": "IL",
-            "addressCountry": "US"
-        },
-        "sameAs": [
-            "https://www.instagram.com/saintcoreholdings",
-            "https://www.linkedin.com/company/saintcoreholdings"
-        ]
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Saint Core Holdings LLC",
+      "alternateName": "Saint Core Holdings",
+      "description": "Chicago-based technology holding company building software platforms for professional services and consumers.",
+      "url": "https://www.saintcoreholdings.com",
+      "logo": "https://www.saintcoreholdings.com/images/logo.png",
+      "telephone": "+1-872-777-7503",
+      "email": "hello@saintcoreholdings.com",
+      "foundingDate": "2024",
+      "founder": { "@type": "Person", "name": "Solomon Amoah" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.instagram.com/saintcoreholdings",
+        "https://www.linkedin.com/company/saintcoreholdings"
+      ],
+      "subOrganization": [
+        { "@type": "Organization", "name": "SaintCoreTax", "url": "https://saintcoretax.com" },
+        { "@type": "Organization", "name": "StudyNovia", "url": "https://studynovia.com" },
+        { "@type": "Organization", "name": "HomeFix" }
+      ]
     }
     </script>
-
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg-dark: #0b0f19;
-            --bg-darker: #05080f;
-            --border: rgba(255,255,255,0.08);
-            --gold: #d4af37;
-            --text-dim: rgba(255,255,255,0.6);
-            --white: #ffffff;
-            --ease: cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: var(--bg-dark);
-            color: var(--white);
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        a { color: inherit; text-decoration: none; }
-
-        /* Accessibility */
-        .skip-link { position: absolute; top: -100%; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--bg-dark); padding: 12px 24px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; z-index: 9999; transition: top 0.2s ease; }
-        .skip-link:focus { top: 10px; }
-        *:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-        }
-
-        /* Navigation */
-        .nav-frame {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 60px;
-            background: rgba(11, 15, 25, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-        }
-        .nav-group { display: flex; gap: 30px; }
-        .nav-group a {
-            font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
-            color: var(--text-dim); transition: color 0.3s ease;
-        }
-        .nav-group a:hover { color: var(--gold); }
-        .brand a {
-            display: flex; align-items: center; gap: 12px; text-decoration: none;
-        }
-        .nav-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem; color: var(--gold);
-        }
-        .nav-toggle { display: none; background: none; border: none; color: var(--text-dim); cursor: pointer; }
-
-        @media (max-width: 768px) {
-            .nav-frame { padding: 15px 20px; }
-            .nav-group { display: none; }
-            .nav-group.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(11,15,25,0.97); border-bottom: 1px solid var(--border); padding: 20px; gap: 16px; }
-            .nav-toggle { display: block; }
-        }
-
-        /* Hero */
-        .hero {
-            padding: 180px 60px 120px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 4.5rem; font-weight: 700; line-height: 1.1;
-            margin-bottom: 24px;
-        }
-        .hero p {
-            font-size: 1rem; color: var(--text-dim);
-            max-width: 560px; margin: 0 auto; line-height: 1.9;
-            font-weight: 300;
-        }
-
-        @media (max-width: 768px) {
-            .hero { padding: 130px 20px 80px; }
-            .hero h1 { font-size: 2.5rem; }
-        }
-
-        /* Section Header */
-        .section-header {
-            text-align: center; margin-bottom: 60px;
-        }
-        .section-header h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem; font-weight: 700; margin-bottom: 15px;
-        }
-        .section-header p {
-            font-size: 0.85rem; color: var(--text-dim);
-            letter-spacing: 2px; text-transform: uppercase;
-        }
-
-        /* Products */
-        .products {
-            padding: 80px 60px;
-            border-top: 1px solid var(--border);
-        }
-        .product-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
-            max-width: 1200px; margin: 0 auto;
-        }
-        @media (max-width: 900px) { .product-grid { grid-template-columns: 1fr; max-width: 500px; } }
-
-        .product-card {
-            border: 1px solid var(--border);
-            padding: 40px 30px;
-            display: flex; flex-direction: column; gap: 20px;
-            transition: border-color 0.3s ease, transform 0.3s var(--ease);
-        }
-        .product-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-        }
-        .product-icon {
-            width: 50px; height: 50px; border-radius: 0;
-            display: flex; align-items: center; justify-content: center;
-            border: 1px solid var(--border);
-        }
-        .product-name {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem; font-weight: 700;
-        }
-        .product-badge {
-            display: inline-block;
-            font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
-            letter-spacing: 2px; padding: 4px 12px;
-            border: 1px solid var(--border); color: var(--text-dim);
-            margin-top: 4px;
-        }
-        .badge-live { border-color: rgba(212,175,55,0.4); color: var(--gold); }
-        .badge-dev { border-color: rgba(255,255,255,0.15); color: var(--text-dim); }
-        .product-desc {
-            font-size: 0.85rem; color: var(--text-dim);
-            line-height: 1.9; font-weight: 300; flex: 1;
-        }
-        .product-link {
-            font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
-            color: var(--gold); font-weight: 600;
-            transition: transform 0.3s ease, text-shadow 0.3s ease;
-            display: inline-block;
-        }
-        .product-link:hover { transform: translateX(4px); text-shadow: 0 0 10px var(--gold); }
-        .product-link-muted {
-            font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
-            color: var(--text-dim); font-weight: 600;
-        }
-
-        /* About */
-        .about {
-            padding: 100px 60px;
-            border-top: 1px solid var(--border);
-        }
-        .about-content {
-            max-width: 700px; margin: 0 auto; text-align: center;
-        }
-        .about-content p {
-            font-size: 0.95rem; color: var(--text-dim);
-            line-height: 1.9; margin-bottom: 20px; font-weight: 300;
-        }
-        .about-meta {
-            margin-top: 30px; font-size: 0.7rem; color: var(--text-dim);
-            letter-spacing: 2px; text-transform: uppercase;
-        }
-
-        /* Contact */
-        .contact {
-            padding: 80px 60px;
-            border-top: 1px solid var(--border);
-        }
-        .contact-grid {
-            display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;
-        }
-        .contact-item { text-align: center; }
-        .contact-label {
-            font-size: 0.65rem; color: var(--text-dim);
-            text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;
-        }
-        .contact-value { font-size: 0.9rem; color: var(--white); font-weight: 300; }
-        .contact-value a { transition: color 0.3s ease; }
-        .contact-value a:hover { color: var(--gold); }
-
-        @media (max-width: 768px) {
-            .products, .about, .contact { padding-left: 20px; padding-right: 20px; }
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg-darker);
-            border-top: 1px solid var(--border);
-            padding: 60px;
-        }
-        .footer-content {
-            display: flex; justify-content: space-between; align-items: center;
-            max-width: 1400px; margin: 0 auto;
-        }
-        .socials { display: flex; gap: 30px; }
-        .socials a {
-            font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
-            color: var(--text-dim); transition: color 0.3s ease;
-        }
-        .socials a:hover { color: var(--gold); }
-        .copyright {
-            font-size: 0.7rem; color: var(--gold); letter-spacing: 2px;
-        }
-        @media (max-width: 768px) {
-            footer { padding: 40px 20px; }
-            .footer-content { flex-direction: column; gap: 30px; text-align: center; }
-            .socials { flex-wrap: wrap; justify-content: center; }
-        }
-    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Saint Core Holdings",
+      "url": "https://www.saintcoreholdings.com/"
+    }
+    </script>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
     <header>
-        <nav class="nav-frame">
+        <nav class="nav-frame" aria-label="Primary">
             <div class="nav-group">
-                <a href="#products">Portfolio</a>
-                <a href="#about">About</a>
+                <a href="/thesis">Thesis</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/about">About</a>
             </div>
             <div class="brand">
-                <a href="/">
-                    <img src="images/logo-128.png" alt="Saint Core Holdings Logo" width="40" height="40" style="border-radius:4px;">
-                    <div class="nav-logo">SAINT CORE HOLDINGS</div>
+                <a href="/" aria-label="Saint Core Holdings — home">
+                    <img src="/images/logo-128.png" alt="" width="36" height="36" style="border-radius:4px;">
+                    <span class="nav-logo">SAINT CORE HOLDINGS</span>
                 </a>
             </div>
             <div class="nav-group" style="justify-content:flex-end;">
-                <a href="#contact">Contact</a>
+                <a href="/partner" class="nav-cta" data-track="nav_partner">Partner</a>
             </div>
-            <button class="nav-toggle" onclick="document.querySelectorAll('.nav-group').forEach(g=>g.classList.toggle('open'))" aria-label="Toggle navigation">
+            <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
         </nav>
     </header>
 
     <main id="main">
-        <section class="hero">
-            <h1>Building the Future of<br>Professional Services</h1>
-            <p>Saint Core Holdings LLC is a technology holding company based in Chicago, Illinois. We build software platforms that help professionals work smarter.</p>
-        </section>
-
-        <section class="products" id="products">
-            <div class="section-header">
-                <p>What We Build</p>
-                <h2>Our Products</h2>
-            </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-icon" style="border-color: rgba(212,175,55,0.3);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div>
-                        <div class="product-name">SaintCoreTax</div>
-                        <span class="product-badge badge-live">Live</span>
-                    </div>
-                    <p class="product-desc">Practice management platform for tax and financial services firms. AI-powered document scanning, smart workflow, client portal, and 8 integrated service modules.</p>
-                    <a href="https://saintcoretax.com" target="_blank" rel="noopener" class="product-link">Visit SaintCoreTax &rarr;</a>
+        <!-- Hero -->
+        <section class="hero container" aria-labelledby="hero-heading">
+            <div class="hero-inner">
+                <div class="hero-title" style="grid-column: 1 / span 9;">
+                    <span class="eyebrow">Chicago · Established 2024</span>
+                    <h1 id="hero-heading" class="display">We build the software<br>professionals wish<br><em>already existed.</em></h1>
                 </div>
-
-                <div class="product-card">
-                    <div class="product-icon" style="border-color: rgba(212,175,55,0.3);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <aside class="hero-side" aria-label="At a glance">
+                    <div class="hero-side-row">
+                        <span class="eyebrow eyebrow--gold">Portfolio</span>
+                        <strong>Three products</strong>
                     </div>
-                    <div>
-                        <div class="product-name">StudyNovia</div>
-                        <span class="product-badge badge-live">Live</span>
+                    <div class="hero-side-row">
+                        <span class="eyebrow">Shipped</span>
+                        <strong>Two live</strong>
                     </div>
-                    <p class="product-desc">Adaptive learning platform for nursing students. AI-generated practice questions, personalized study paths, and real-time performance analytics for NCLEX preparation.</p>
-                    <a href="https://studynovia.com" target="_blank" rel="noopener" class="product-link">Visit StudyNovia &rarr;</a>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-icon" style="border-color: rgba(255,255,255,0.1);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <div class="hero-side-row">
+                        <span class="eyebrow">Based in</span>
+                        <strong>Chicago, IL</strong>
                     </div>
-                    <div>
-                        <div class="product-name">HomeFix</div>
-                        <span class="product-badge badge-dev">In Development</span>
-                    </div>
-                    <p class="product-desc">Smart home maintenance assistant for homeowners. Auto-generated maintenance schedules, AI photo diagnosis, appliance lifespan tracking, and climate-aware reminders.</p>
-                    <span class="product-link-muted">Coming Soon</span>
+                </aside>
+                <p class="lead hero-lead" data-reveal>
+                    Saint Core Holdings is a privately held technology company. We fund, build, and operate a small number of opinionated platforms for the work that runs the real economy — tax prep, clinical study, home ownership — end to end, from the database up.
+                </p>
+                <div class="btn-row hero-ctas" data-reveal>
+                    <a href="/portfolio" class="btn btn--primary" data-track="hero_portfolio">
+                        Explore the portfolio
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="/thesis" class="btn btn--ghost" data-track="hero_thesis">Read the thesis</a>
                 </div>
             </div>
         </section>
 
-        <section class="about" id="about">
-            <div class="section-header">
-                <p>Who We Are</p>
-                <h2>About</h2>
-            </div>
-            <div class="about-content">
-                <p>Saint Core Holdings LLC is a Chicago-based technology company founded by Solomon Amoah. We develop cloud-based software platforms that serve professional services firms and consumers.</p>
-                <p>Our products are built with modern technology including AI, cloud infrastructure, and mobile-first design. We are committed to building tools that make complex processes simple and accessible.</p>
-                <div class="about-meta">Registered in Cook County, Illinois</div>
+        <!-- Facts (real facts only — no fabricated metrics) -->
+        <section class="container" aria-label="At a glance" style="padding: 0 var(--page-gutter);">
+            <div class="facts" data-reveal>
+                <div class="fact"><span class="fact-value">03</span><span class="fact-label">Products in the portfolio</span></div>
+                <div class="fact"><span class="fact-value">02</span><span class="fact-label">Live in production</span></div>
+                <div class="fact"><span class="fact-value">01</span><span class="fact-label">Headquarters · Chicago</span></div>
+                <div class="fact"><span class="fact-value">2024</span><span class="fact-label">Founded</span></div>
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <div class="section-header">
-                <p>Get in Touch</p>
-                <h2>Contact</h2>
+        <!-- Thesis teaser -->
+        <section class="section" id="thesis" aria-labelledby="thesis-heading">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="eyebrow eyebrow--gold">Operating Thesis</span>
+                    <h2 id="thesis-heading">Five beliefs that decide what we build — and what we don't.</h2>
+                </div>
+                <div class="thesis-list" data-reveal>
+                    <article class="thesis-item">
+                        <div class="thesis-numeral">01</div>
+                        <div class="thesis-body">
+                            <h3>Software should feel inevitable.</h3>
+                            <p>Not configurable. Not "powerful." Obvious. If a partner or a student or a homeowner has to think about the tool, the tool has failed.</p>
+                        </div>
+                    </article>
+                    <article class="thesis-item">
+                        <div class="thesis-numeral">02</div>
+                        <div class="thesis-body">
+                            <h3>Ship the workflow, not the feature list.</h3>
+                            <p>Professionals don't buy checkboxes. They buy their Tuesday back. We build for the week somebody actually has, not the one a screenshot captures.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="btn-row" data-reveal>
+                    <a href="/thesis" class="btn btn--ghost" data-track="home_read_thesis">
+                        Read the full thesis
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
             </div>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-label">Email</div>
-                    <div class="contact-value"><a href="mailto:hello@saintcoreholdings.com">hello@saintcoreholdings.com</a></div>
+        </section>
+
+        <!-- Portfolio teaser (bento) -->
+        <section class="section" id="products" aria-labelledby="portfolio-heading">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <span class="eyebrow eyebrow--gold">Portfolio</span>
+                    <h2 id="portfolio-heading">Three platforms. Three verticals. One operating standard.</h2>
+                    <p class="lead">Every product in the portfolio is built, operated, and supported by Saint Core. No white-labels, no thin wrappers.</p>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-label">Phone</div>
-                    <div class="contact-value"><a href="tel:+18727777503">(872) 777-7503</a></div>
+                <div class="portfolio-grid" data-reveal>
+                    <a href="/portfolio/saintcoretax" class="card card--flagship" data-magnetic data-track="home_card_saintcoretax">
+                        <div>
+                            <div class="card-meta">
+                                <span class="card-icon" aria-hidden="true">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </span>
+                                <span class="badge badge--live">Live</span>
+                                <span class="card-category">Practice OS · Tax &amp; financial firms</span>
+                            </div>
+                            <h3 class="card-name" style="margin-top:24px;">SaintCoreTax</h3>
+                        </div>
+                        <p class="card-desc">Eight integrated modules in one login — intake, e-signature, document scanning, billing, client portal, and the workflow your partners actually use. Built for tax and financial services firms.</p>
+                        <span class="card-link">
+                            Explore SaintCoreTax
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </a>
+
+                    <a href="/portfolio/studynovia" class="card card--half" data-magnetic data-track="home_card_studynovia">
+                        <div class="card-meta">
+                            <span class="card-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            </span>
+                            <span class="badge badge--live">Live</span>
+                        </div>
+                        <h3 class="card-name">StudyNovia</h3>
+                        <span class="card-category">Adaptive exam prep · Nursing</span>
+                        <p class="card-desc">NCLEX preparation that reads your last answers and rebuilds tomorrow's study plan. Podcast-format StudyPods audio lessons and an AI study companion named Novia.</p>
+                        <span class="card-link">
+                            Explore StudyNovia
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </a>
+
+                    <a href="/portfolio/homefix" class="card card--half" data-magnetic data-track="home_card_homefix">
+                        <div class="card-meta">
+                            <span class="card-icon card-icon--muted" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                            </span>
+                            <span class="badge badge--dev">In Development</span>
+                        </div>
+                        <h3 class="card-name">HomeFix</h3>
+                        <span class="card-category">Home operations · Consumer</span>
+                        <p class="card-desc">Every appliance, every warranty, every climate-aware reminder. A home operations assistant for the maintenance the manual never covered.</p>
+                        <span class="card-link card-link--muted">
+                            Learn more
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                        </span>
+                    </a>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-label">Location</div>
-                    <div class="contact-value">Chicago, Illinois</div>
+            </div>
+        </section>
+
+        <!-- About teaser -->
+        <section class="section" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="about-grid" data-reveal>
+                    <figure class="about-figure">
+                        <img src="/images/solomon.jpg" alt="Portrait of Solomon Amoah, founder of Saint Core Holdings" loading="lazy" width="600" height="750">
+                    </figure>
+                    <div class="about-body">
+                        <span class="eyebrow eyebrow--gold">About</span>
+                        <h2 id="about-heading">A Chicago holding company. Founder-led. Privately held.</h2>
+                        <p>Saint Core Holdings was founded in 2024 by Solomon Amoah. We exist because the tools that run professional work — tax prep, clinical study, home ownership — are either built for a decade ago or built for nobody in particular.</p>
+                        <p>We don't take outside capital. We don't spin up a product unless we'd use it daily. We ship from the database up and we stay responsible for the result.</p>
+                        <div class="btn-row">
+                            <a href="/about" class="btn btn--ghost" data-track="home_about">
+                                Read more about us
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner CTA -->
+        <section class="section" id="contact" aria-labelledby="partner-heading">
+            <div class="container container--narrow">
+                <div class="section-head section-head--center" data-reveal>
+                    <span class="eyebrow eyebrow--gold">Partnerships</span>
+                    <h2 id="partner-heading">Operators, investors, and channel partners — talk to us.</h2>
+                    <p class="lead">We keep partnerships small and long. If you build, sell, or fund in one of our verticals, we'd like to hear from you.</p>
+                </div>
+                <div class="btn-row" style="justify-content:center;" data-reveal>
+                    <a href="/partner" class="btn btn--primary" data-track="home_partner">
+                        Start a conversation
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="mailto:hello@saintcoreholdings.com" class="btn btn--ghost" data-track="home_email">hello@saintcoreholdings.com</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="socials">
-                <a href="https://www.instagram.com/saintcoreholdings" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.linkedin.com/company/saintcoreholdings" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="terms">Terms</a>
-                <a href="privacy">Privacy</a>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="nav-logo">SAINT CORE HOLDINGS</span>
+                <p>A privately held technology holding company. Chicago, Illinois. Est. 2024.</p>
             </div>
-            <div class="copyright">&copy; 2026 SAINT CORE HOLDINGS LLC</div>
+            <div class="footer-col">
+                <h4>Portfolio</h4>
+                <ul>
+                    <li><a href="/portfolio/saintcoretax">SaintCoreTax</a></li>
+                    <li><a href="/portfolio/studynovia">StudyNovia</a></li>
+                    <li><a href="/portfolio/homefix">HomeFix</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/thesis">Thesis</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/partner">Partner</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy">Privacy</a></li>
+                    <li><a href="/terms">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/saintcoreholdings" target="_blank" rel="noopener me">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/saintcoreholdings" target="_blank" rel="noopener me">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Registered in Cook County, Illinois</p>
+            <p class="copyright">&copy; 2026 Saint Core Holdings LLC</p>
         </div>
     </footer>
+
+    <script src="/scripts.js" defer></script>
 </body>
 </html>
