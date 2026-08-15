@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+# Build-time fragments, not pages. The same markup already appears in
+# every real page, so indexing these would only create duplicates.
+Disallow: /partials/
 
 # AI Search Bots - Allow for citation
 User-agent: GPTBot

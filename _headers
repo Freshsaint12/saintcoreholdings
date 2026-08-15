@@ -22,6 +22,11 @@
   # Do not add `no-transform` to Cache-Control — it stops beacon injection.
   Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com https://ajax.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://cloudflareinsights.com; upgrade-insecure-requests
 
+# Build-time fragments (see build.js). Served because Pages deploys the whole
+# repo, but they are not pages — keep them out of search results.
+/partials/*
+  X-Robots-Tag: noindex
+
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
