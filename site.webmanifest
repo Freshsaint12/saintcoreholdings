@@ -1,8 +1,10 @@
 {
   "name": "Saint Core Holdings",
   "short_name": "Saint Core",
-  "description": "Premium services and technology ventures in Chicago",
+  "description": "A Chicago technology holding company. We fund, build, and operate opinionated software platforms end to end.",
   "start_url": "/",
+  "scope": "/",
+  "id": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
