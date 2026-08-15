@@ -12,6 +12,9 @@
     const setOpen = (open) => {
       toggle.setAttribute('aria-expanded', String(open));
       groups.forEach((g) => g.classList.toggle('is-open', open));
+      // Opaque bar while the drawer is open, so page content behind it does
+      // not ghost through the translucent nav background.
+      if (nav) nav.classList.toggle('is-nav-open', open);
     };
     const isOpen = () => toggle.getAttribute('aria-expanded') === 'true';
 
@@ -45,17 +48,23 @@
   }
 
   // ── Active-link highlighter ──
-  const path = window.location.pathname.replace(/\/$/, '') || '/';
+  // Normalize so the match works whether the host serves clean URLs
+  // (/portfolio, as Cloudflare Pages does) or raw files (/portfolio.html).
+  const path = window.location.pathname
+    .replace(/\/index\.html?$/, '/')
+    .replace(/\.html?$/, '')
+    .replace(/\/$/, '') || '/';
   document.querySelectorAll('.nav-group a').forEach((a) => {
     const href = a.getAttribute('href') || '';
     // Normalize: strip trailing slash, strip .html, treat empty as /
     const target = href.replace(/\.html$/, '').replace(/\/$/, '') || '/';
-    let active = false;
-    if (target === '/') active = path === '/';
-    else active = path === target || path.startsWith(target + '/');
-    if (active) {
+    const exact = path === target;
+    const ancestor = target !== '/' && path.startsWith(target + '/');
+    if (exact || ancestor) {
       a.classList.add('is-active');
-      a.setAttribute('aria-current', 'page');
+      // "page" is reserved for the page you are actually on; an ancestor
+      // (e.g. /portfolio while viewing /portfolio/shopos) is "true".
+      a.setAttribute('aria-current', exact ? 'page' : 'true');
     }
   });
 

@@ -191,17 +191,26 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 @media (max-width: 820px) {
-    .nav-frame { padding: 14px 20px; }
-    main { padding-top: 68px; }
-    .nav-group { display: none; }
+    /* The bar wraps: brand + toggle on the first row, then each drawer group
+       stacked below it in normal flow. Both groups must NOT be absolutely
+       positioned at top:100% — they would land on top of each other and the
+       Partner group would cover (and swallow clicks on) the first link. */
+    .nav-frame { padding: 14px 20px; flex-wrap: wrap; }
+    .nav-frame.is-nav-open { background: var(--bg-dark); }
+    .brand { order: 1; }
+    .nav-toggle { order: 2; display: inline-flex; }
+    .nav-group { order: 3; display: none; }
     .nav-group.is-open {
-        display: flex; flex-direction: column; position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: rgba(11,15,25,0.98);
-        border-bottom: 1px solid var(--border);
-        padding: 24px 20px; gap: 20px; align-items: flex-start;
+        display: flex; flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 0 0 8px;
     }
-    .nav-toggle { display: inline-flex; }
+    .nav-group.is-open:first-child {
+        margin-top: 14px; padding-top: 12px;
+        border-top: 1px solid var(--border);
+    }
 }
 
 /* ── Buttons ── */
@@ -384,9 +393,10 @@ main { padding-top: 80px; }
     background: linear-gradient(160deg, rgba(212,175,55,0.34), rgba(212,175,55,0.07) 68%);
     -webkit-background-clip: text; background-clip: text;
     color: transparent;
+    opacity: 0.82;
     transition: opacity 0.4s var(--ease);
 }
-.thesis-item:hover .thesis-numeral { opacity: 0.82; }
+.thesis-item:hover .thesis-numeral { opacity: 1; }
 .thesis-body h2, .thesis-body h3 {
     font-family: var(--serif);
     font-size: var(--text-h3);
@@ -492,8 +502,6 @@ main { padding-top: 80px; }
     background: color-mix(in srgb, var(--accent) 16%, transparent);
     border-color: color-mix(in srgb, var(--accent) 65%, transparent);
 }
-/* Retained for markup compatibility — accent now carries the distinction */
-.card-icon--muted { border-color: color-mix(in srgb, var(--accent) 28%, transparent); }
 .card-name {
     font-family: var(--serif);
     font-weight: 700;
@@ -748,12 +756,14 @@ main { padding-top: 80px; }
     margin: 32px 0 14px;
 }
 .article > h2:first-child { margin-top: 0; }
-/* Serif sub-heading, one level below a section label */
+/* Sub-heading one level below a section label — must read as smaller than
+   the h2 above it, not larger. */
 .article h3 {
-    font-family: var(--serif); font-weight: 700;
-    font-size: var(--text-h3);
-    margin: 32px 0 14px;
-    letter-spacing: -0.005em;
+    font-family: var(--sans); font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--text);
+    margin: 28px 0 10px;
+    letter-spacing: 0;
 }
 .article p {
     color: var(--text-dim); line-height: 1.85;
@@ -785,7 +795,6 @@ main { padding-top: 80px; }
     margin: 52px 0 16px;
 }
 .article--legal > h2:first-child { margin-top: 0; }
-.article--legal ul li::before { content: '·'; }
 .legal-meta {
     font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase;
     color: var(--text-muted); font-weight: 600;
@@ -830,7 +839,6 @@ main { padding-top: 80px; }
     box-shadow: var(--shadow-md);
 }
 .next-up a:hover h3 { color: var(--gold); }
-.next-up h3 { transition: color 0.3s ease; }
 .next-up h3 {
     font-family: var(--serif); font-weight: 700;
     font-size: 1.5rem;

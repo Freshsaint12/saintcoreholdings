@@ -8,7 +8,10 @@
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
-  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # No includeSubDomains: this would bind every *.saintcoreholdings.com host
+  # to HTTPS-only for a year, and the subdomain inventory is not verified.
+  # Add it once you have confirmed every subdomain serves HTTPS.
+  Strict-Transport-Security: max-age=31536000
   # script-src also allows the scripts Cloudflare itself injects on a proxied
   # zone: the Web Analytics RUM beacon (static.cloudflareinsights.com) and
   # Rocket Loader (ajax.cloudflare.com). Without these, enabling either
