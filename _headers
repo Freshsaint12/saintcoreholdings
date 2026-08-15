@@ -1,3 +1,8 @@
+# Cloudflare Pages — _headers
+# Rules are matched top-down and merged; later rules win on conflict.
+# Exact paths and trailing-splat wildcards only, so nothing depends on
+# extension-glob support.
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -9,14 +14,34 @@
 /images/*
   Cache-Control: public, max-age=31536000, immutable
 
-/*.png
+/favicon.ico
   Cache-Control: public, max-age=31536000, immutable
 
-/*.ico
+/favicon-16x16.png
   Cache-Control: public, max-age=31536000, immutable
 
+/favicon-32x32.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon-96x96.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/web-app-manifest-192x192.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/web-app-manifest-512x512.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# Shared CSS/JS have no content hash in the filename, so keep these short
+# enough that a deploy is picked up quickly.
 /styles.css
   Cache-Control: public, max-age=3600, must-revalidate
 
 /scripts.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/site.webmanifest
   Cache-Control: public, max-age=3600, must-revalidate
