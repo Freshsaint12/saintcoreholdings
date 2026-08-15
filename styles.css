@@ -63,16 +63,19 @@ body {
 }
 
 /* Ambient light — two fixed, very soft fields so the page has depth
-   instead of reading as flat near-black. Purely decorative. */
+   instead of reading as flat near-black. Purely decorative.
+   z-index:-1 puts it behind all content while staying above the canvas
+   background. Do NOT raise body's children to sit above this instead:
+   giving header/main/footer a shared z-index makes `main` paint over the
+   fixed nav, and main's top padding then silently swallows every nav click. */
 body::before {
     content: '';
     position: fixed; inset: 0;
-    pointer-events: none; z-index: 0;
+    pointer-events: none; z-index: -1;
     background:
         radial-gradient(760px 520px at 78% -8%, rgba(212,175,55,0.07), transparent 62%),
         radial-gradient(900px 620px at 6% 32%, rgba(90,120,220,0.05), transparent 60%);
 }
-body > * { position: relative; z-index: 1; }
 
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; height: auto; }
@@ -923,6 +926,8 @@ main { padding-top: 80px; }
 /* ── Product page hero ── */
 .page-hero {
     position: relative;
+    /* contains the z-index:-1 glow below so it cannot escape this section */
+    isolation: isolate;
     padding-top: clamp(3rem, 2rem + 3vw, 5rem);
 }
 .page-hero::before {
