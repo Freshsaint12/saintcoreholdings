@@ -9,7 +9,15 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; upgrade-insecure-requests
+  # script-src also allows the scripts Cloudflare itself injects on a proxied
+  # zone: the Web Analytics RUM beacon (static.cloudflareinsights.com) and
+  # Rocket Loader (ajax.cloudflare.com). Without these, enabling either
+  # feature would be silently blocked by this policy. Email Obfuscation
+  # injects from /cdn-cgi/ on the same origin, so 'self' already covers it.
+  # Auto-injected Web Analytics posts to same-origin /cdn-cgi/rum ('self');
+  # cloudflareinsights.com covers a manually embedded beacon.
+  # Do not add `no-transform` to Cache-Control — it stops beacon injection.
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com https://ajax.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://cloudflareinsights.com; upgrade-insecure-requests
 
 /images/*
   Cache-Control: public, max-age=31536000, immutable
